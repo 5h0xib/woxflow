@@ -131,6 +131,10 @@ header{
 }
 
 @media screen and (max-width: 950px){
+  .contact-form textarea{
+    width: 93%;
+    padding: 12px;
+  }
   .contact-section{
     flex-direction: column;
   }
@@ -144,6 +148,6 @@ header{
   }
 
   .contact-form .text-box{
-    width: 100%;
+    width: 93%;
   }
 }
