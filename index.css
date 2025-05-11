@@ -8,6 +8,8 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 a{
@@ -80,6 +82,45 @@ header{
     margin-top: 15px;
     max-width: 600px;
 }
+
+.woxflow-svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6969;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.woxflow-svg.slide-up {
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+.st0 {
+    stroke: white;
+    stroke-width: 3px;
+    stroke-dasharray: 1800;
+    animation: effectText 4s ease-in-out infinite;
+    fill: transparent;
+}
+
+@keyframes effectText {
+  from {
+    fill: transparent;
+    stroke-dashoffset: 1800;
+  }
+  to {
+    fill: white;
+    stroke-dashoffset: 0;
+  }
+}
+      
 
 .hero-section .content button {
     letter-spacing: 2px;
@@ -163,7 +204,7 @@ header{
 
 .course {
     max-width: 1800px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
@@ -171,8 +212,6 @@ header{
     align-items: center;
     justify-content: center;
 }
-
-
 
 h1 {
     font-size: 36px;
@@ -189,15 +228,24 @@ p {
 
 .course .head-1{
     padding-bottom: 70px;
+    max-width: 1000px;
+    padding: 25px;
+    margin: auto;
 }
 
 .head-2{
     margin: 10px;
+    max-width: 1000px;
+    padding: 25px;
+    margin: auto;
 }
 
 .head-3{
     margin: 10px;
-    margin-top: 70px;
+    margin-top: 90px;
+    max-width: 1000px;
+    padding: 25px;
+    margin: auto;
 }
 
 .course .head-1 h1{
@@ -215,28 +263,74 @@ p {
 .course-col {
     flex-basis: 31%;
     background: rgb(255, 255, 255);
-    border-radius: 50px;
+    border-radius: 20px;
     margin: 20px;
     margin-bottom: 5%;
     padding: 20px 12px;
-    box-sizing: border-box;
-    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.432);
+    border: 1px solid #cacaca;
+    box-shadow: 5px 5px 20px #e4e4e4;
     max-width: 350px;
     min-width: 250px;
 }
 
-.course-col2 {
-    flex-basis: 31%;
-    background: #ffffff;
-    border-radius: 50px;
-    margin: 20px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    box-shadow: 0 0 30px 1px rgb(0, 79, 182);
-    max-width: 350px;
-    min-width: 250px;
+/* services */
+
+.services-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 20;
+    margin-bottom: 70px;
 }
+
+.services-section .services-row {
+    display: flex;
+    flex-wrap: nowrap; /* Important: Prevent wrapping */
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.services-section .services-row::-webkit-scrollbar {
+    height: 10px;
+    padding: 0 15px;
+}
+
+.services-section .services-row::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.services-section .services-row::-webkit-scrollbar-thumb {
+    background: #004db3;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.services-section .services-row::-webkit-scrollbar-thumb:hover {
+    background: #00337a;
+}
+
+
+.services-section .services-row .course-col2 {
+    flex: 0 0 auto; /* Prevent shrinking */
+    background: #ffffff;
+    border-radius: 20px;
+    margin: 0 20px;
+    padding: 20px 12px;
+    border: 1px solid #7d7cb1;
+    box-shadow: 5px 5px 20px #e4e4e4;
+    width: 250px; /* Set fixed width for consistent sliding */
+    text-align: center;
+}
+
 
 .course-col h2{
     color: black;
@@ -257,13 +351,11 @@ h3 {
 
 @media (max-width: 700px) {
     .course-col{
-        border-radius: 30px;
-        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.363);
+        border-radius: 20px;
     }
 
     .course-col2{
-        border-radius: 30px;
-        box-shadow: 0 0 20px 0px rgb(0, 79, 182);
+        border-radius: 20px;
     }
 
    h3{
@@ -288,20 +380,42 @@ h3 {
     align-items: center;
 }
 
-.contact-info i{
-    margin-right: 20px;
-    font-size: 25px;
+.contact-section .contact-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.contact-info{
+    margin: 40px;
+    color: #fff;
+    text-shadow: 0 0 1px #00000077, 0 0 1px #0000007e, 0 0 1px #00000079;
+    max-width: 500px;
+}
+
+.contact-info h2{
+    text-align: center;
+    margin: 20px;
+}
+
+.contact-info a{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.map-container{
+    border-radius: 10px;
+    overflow: hidden;
+    height: 250px;
 }
 
 .contact-form{
-    max-width: 1000px;
+    max-width: 400px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
-}
-
-.contact-info, .contact-form{
-    max-width: 600px;
 }
 
 .contact-form h2{
@@ -394,6 +508,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 70px;
 }
 
 .icon-container {
@@ -410,28 +525,75 @@ h3 {
 .icon {
     text-align: center;
     color: rgb(0, 0, 0);
+    margin: 20px;
 }
 
 .icon img {
     height: 50px;
-    margin-bottom: 10px;
 }
 
 .icon p {
-    font-weight: 800;
+    font-weight: 500;
     font-size: 16px;
+}
+
+
+/* Floating call & whatsapp icon */
+
+.phone-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #257fd3;
+  color: white;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 24px;
+  height: 1px;
+  width: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone-float:hover {
+  color: white;
+  transform: scale(1.1);
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 24px;
+  height: 1px;
+  width: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whatsapp-float:hover {
+  color: white;
+  transform: scale(1.1);
 }
 
 
 /* FOOTER */
 
 .footer{
-    color: #000000;
+    color: #ffffff;
     width: 100%;
     text-align: center;
     padding: 1px 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.678),rgba(0, 75, 179, 0.548));
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.932);
+    background-color: #1d1d1d;
 }
 
 .footer h4 img{
@@ -443,7 +605,7 @@ h3 {
 }
 
 .icons i{
-    color: #000000;
+    color: #ffffff;
     margin: 0 13px;
     cursor: pointer;
     padding: 25px 0;
