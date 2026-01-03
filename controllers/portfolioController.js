@@ -24,7 +24,7 @@
                 type: 'Research Platform',
                 color: '#3a89ffff',
                 description: 'Academic research platform with market research, data analytics and more',
-                image: 'assets/images/portfolio-researchgraph.png',
+                image: 'assets/images/portfolio-ResearchGraph.png',
                 url: 'https://researchgraph.in'
             },
             {
@@ -33,7 +33,7 @@
                 type: 'Technology Company',
                 color: '#389adbff',
                 description: 'Corporate website showcasing technology solutions with clean, professional design.',
-                image: 'assets/images/portfolio-risetechglobal.png',
+                image: 'assets/images/portfolio-RiseTechGlobal.png',
                 url: 'https://risetechglobal.com'
             },
             {
