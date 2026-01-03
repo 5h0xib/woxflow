@@ -1,0 +1,136 @@
+<!-- Services Page -->
+<div class="services-page">
+
+    <!-- Page Header -->
+    <section class="page-header section" style="background-color: var(--color-gray-light);">
+        <div class="container text-center">
+            <div scroll-animate>
+                <h1>Our Services</h1>
+                <p class="color-gray"
+                    style="font-size: var(--font-size-lg); max-width: 700px; margin: var(--spacing-lg) auto 0;">
+                    Comprehensive web solutions designed for success</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid-section section">
+        <div class="container">
+            <div class="services-list">
+                <div class="service-item" ng-repeat="service in vm.services" scroll-animate
+                    scroll-delay="{{$index * 100}}">
+                    <div class="service-header">
+                        <div class="service-icon-large">
+                            <i class="fas" ng-class="{
+                                'fa-laptop-code': $index === 0,
+                                'fa-palette': $index === 1,
+                                'fa-shopping-cart': $index === 2,
+                                'fa-tools': $index === 3
+                            }" style="font-size: 4rem; color: var(--color-primary);"></i>
+                        </div>
+                        <div class="service-header-text">
+                            <h2>{{service.title}}</h2>
+                            <p class="color-gray" style="font-size: var(--font-size-base);">{{service.description}}</p>
+                        </div>
+                    </div>
+
+                    <div class="service-features">
+                        <h4 class="mb-md">Key Features:</h4>
+                        <ul class="features-list">
+                            <li ng-repeat="feature in service.features">{{feature}}</li>
+                        </ul>
+                    </div>
+
+                    <div class="divider" ng-if="!$last"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section" style="background-color: var(--color-gray-light);">
+        <div class="container text-center">
+            <div scroll-animate>
+                <h2 class="mb-md">Need a Custom Solution?</h2>
+                <p class="color-gray mb-xl" style="font-size: var(--font-size-lg);">We can tailor our services to meet
+                    your specific needs</p>
+                <a href="#!/contact" class="btn btn-large">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<style>
+    /* Services Page Specific Styles */
+    .services-list {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .service-item {
+        margin-bottom: var(--spacing-3xl);
+    }
+
+    .service-header {
+        display: flex;
+        gap: var(--spacing-xl);
+        align-items: flex-start;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .service-icon-large {
+        flex-shrink: 0;
+        padding: var(--spacing-md);
+        border-left: 3px solid var(--color-primary);
+        transition: all var(--transition-base);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-item:hover .service-icon-large {
+        padding-left: var(--spacing-lg);
+    }
+
+    .service-header-text {
+        flex: 1;
+    }
+
+    .service-header-text h2 {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .features-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .features-list li {
+        padding: var(--spacing-sm) 0;
+        padding-left: var(--spacing-xl);
+        position: relative;
+        font-size: var(--font-size-base);
+        color: var(--color-gray-dark);
+    }
+
+    .features-list li::before {
+        content: '\f121';
+        position: absolute;
+        font-family: "Font Awesome 6 Free";
+        left: 0;
+        color: var(--color-gray-dark);
+        font-weight: 800;
+    }
+
+    @media (max-width: 768px) {
+        .service-header {
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .service-icon-large {
+            align-self: flex-start;
+        }
+    }
+</style>

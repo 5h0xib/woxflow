@@ -1,0 +1,161 @@
+<!-- 404 Page Not Found -->
+<div class="not-found-page">
+
+    <!-- 404 Section -->
+    <section class="not-found-section section">
+        <div class="container">
+            <div class="not-found-content text-center" scroll-animate>
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Page Not Found</h2>
+                <p class="error-message color-gray">
+                    The page you are looking for doesn't exist or has been moved.
+                </p>
+
+                <div class="error-actions">
+                    <a href="#!/" class="btn btn-large">Go to Homepage</a>
+                    <a href="#!/contact" class="btn btn-large btn-secondary">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links-section" scroll-animate scroll-delay="200">
+                <h3 class="text-center mb-xl">You might be looking for:</h3>
+                <div class="grid grid-3">
+                    <a href="#!/about" class="quick-link-card card">
+                        <i class="fas fa-info-circle" style="font-size: 2rem; margin-bottom: var(--spacing-md);"></i>
+                        <h4>About Us</h4>
+                        <p class="color-gray">Learn about our agency</p>
+                    </a>
+                    <a href="#!/services" class="quick-link-card card">
+                        <i class="fas fa-briefcase" style="font-size: 2rem; margin-bottom: var(--spacing-md);"></i>
+                        <h4>Our Services</h4>
+                        <p class="color-gray">See what we offer</p>
+                    </a>
+                    <a href="#!/portfolio" class="quick-link-card card">
+                        <i class="fas fa-images" style="font-size: 2rem; margin-bottom: var(--spacing-md);"></i>
+                        <h4>Portfolio</h4>
+                        <p class="color-gray">View our work</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<style>
+    /* 404 Page Specific Styles */
+    .not-found-section {
+        min-height: calc(100vh - 88px - 200px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .not-found-content {
+        max-width: 800px;
+        margin: 0 auto var(--spacing-4xl);
+    }
+
+    .error-code {
+        font-size: 10rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: var(--spacing-md);
+        color: var(--color-primary);
+        letter-spacing: -0.05em;
+    }
+
+    .error-title {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .error-message {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-2xl);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .error-actions {
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .quick-links-section {
+        margin-top: var(--spacing-4xl);
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quick-links-section h3 {
+        font-size: var(--font-size-xl);
+        color: var(--color-gray-dark);
+    }
+
+    .quick-link-card {
+        text-align: center;
+        padding: var(--spacing-xl);
+        text-decoration: none;
+        color: var(--color-primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all var(--transition-base);
+    }
+
+    .quick-link-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--color-primary);
+    }
+
+    .quick-link-card h4 {
+        margin-bottom: var(--spacing-sm);
+        font-size: var(--font-size-lg);
+    }
+
+    .quick-link-card p {
+        font-size: var(--font-size-sm);
+        margin: 0;
+    }
+
+    .quick-link-card i {
+        color: var(--color-primary);
+        transition: color var(--transition-base);
+    }
+
+    .quick-link-card:hover i {
+        color: var(--color-accent-blue);
+    }
+
+    @media (max-width: 768px) {
+        .error-code {
+            font-size: 6rem;
+        }
+
+        .error-title {
+            font-size: var(--font-size-2xl);
+        }
+
+        .error-message {
+            font-size: var(--font-size-base);
+        }
+
+        .error-actions {
+            flex-direction: column;
+        }
+
+        .error-actions .btn {
+            width: 100%;
+        }
+
+        .quick-links-section .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

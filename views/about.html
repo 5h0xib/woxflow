@@ -1,0 +1,108 @@
+<!-- About Page -->
+<div class="about-page">
+
+    <!-- Page Header -->
+    <section class="page-header section" style="background-color: var(--color-gray-light);">
+        <div class="container text-center">
+            <div scroll-animate>
+                <h1>About Woxflow</h1>
+                <p class="color-gray"
+                    style="font-size: var(--font-size-lg); max-width: 700px; margin: var(--spacing-lg) auto 0;">Creating
+                    digital experiences that matter</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section section">
+        <div class="container">
+            <div class="story-content" scroll-animate>
+                <h2 class="mb-lg">Our Story</h2>
+                <p style="font-size: var(--font-size-lg); line-height: 1.8; max-width: 900px;">{{vm.story}}</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision section">
+        <div class="container">
+            <div class="grid grid-2">
+                <div class="mission-box" scroll-animate>
+                    <h3 class="mb-md">Our Mission</h3>
+                    <p style="font-size: var(--font-size-base); line-height: 1.8; color: var(--color-gray-dark);">
+                        {{vm.mission}}</p>
+                </div>
+
+                <div class="vision-box" scroll-animate scroll-delay="200">
+                    <h3 class="mb-md">Our Vision</h3>
+                    <p style="font-size: var(--font-size-base); line-height: 1.8; color: var(--color-gray-dark);">
+                        {{vm.vision}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Values Section -->
+    <section class="values-section section" style="background-color: var(--color-gray-light);">
+        <div class="container">
+            <div class="section-header text-center mb-2xl" scroll-animate>
+                <h2>Our Core Values</h2>
+                <p class="color-gray">The principles that guide everything we do</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="value-card card" ng-repeat="value in vm.values" scroll-animate
+                    scroll-delay="{{$index * 100}}">
+                    <h3 class="card-title">{{value.title}}</h3>
+                    <p class="card-text">{{value.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section">
+        <div class="container text-center">
+            <div scroll-animate>
+                <h2 class="mb-md">Let's Work Together</h2>
+                <p class="color-gray mb-xl" style="font-size: var(--font-size-lg);">Ready to bring your vision to life?
+                </p>
+                <a href="#!/contact" class="btn btn-large">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<style>
+    /* About Page Specific Styles */
+    .page-header {
+        padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+    }
+
+    .story-content {
+        max-width: 900px;
+    }
+
+    .mission-box,
+    .vision-box {
+        padding: var(--spacing-2xl);
+        border-left: 4px solid var(--color-primary);
+    }
+
+    .value-card {
+        background-color: var(--color-secondary);
+    }
+
+    @media (max-width: 768px) {
+
+        .mission-box,
+        .vision-box {
+            padding: var(--spacing-lg);
+        }
+    }
+</style>

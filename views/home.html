@@ -1,0 +1,198 @@
+<!-- Home Page -->
+<div class="home-page">
+
+    <!-- Hero Section -->
+    <section class="hero section">
+        <div class="container">
+            <div class="hero-content" scroll-animate>
+                <h1 class="hero-title">Building Websites<br>That <span class="color-accent">Flow</span></h1>
+                <p class="hero-subtitle">Modern web development agency creating minimal, elegant digital experiences
+                    that help your business thrive online.</p>
+
+                <div class="hero-cta">
+                    <a href="#!/contact" class="btn btn-large">Get a Quote</a>
+                    <a href="#!/portfolio" class="btn btn-large btn-secondary">View Work</a>
+                </div>
+            </div>
+
+            <!-- 3D Device Animation -->
+            <div class="device-3d" scroll-animate scroll-delay="200">
+                <div class="device-3d-inner">
+                    <div class="device-mockup">
+                        <div class="device-screen"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview section" style="background-color: var(--color-gray-light);">
+        <div class="container">
+            <div class="section-header text-center mb-2xl" scroll-animate>
+                <h2>What We Do</h2>
+                <p class="color-gray">Comprehensive web solutions tailored to your needs</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="card" ng-repeat="service in vm.services" scroll-animate scroll-delay="{{$index * 100}}">
+                    <div class="service-icon mb-md">
+                        <i class="fas" ng-class="{
+                            'fa-laptop-code': service.icon === 'code',
+                            'fa-palette': service.icon === 'palette',
+                            'fa-shopping-cart': service.icon === 'shopping',
+                            'fa-tools': service.icon === 'support'
+                        }" style="font-size: 3rem; color: var(--color-primary);"></i>
+                    </div>
+                    <h3 class="card-title">{{service.title}}</h3>
+                    <p class="card-text">{{service.description}}</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-xl" scroll-animate>
+                <a href="#!/services" class="btn">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Woxflow Section -->
+    <section class="why-woxflow section">
+        <div class="container">
+            <div class="section-header text-center mb-2xl" scroll-animate>
+                <h2>Why Choose Woxflow</h2>
+                <p class="color-gray">What sets us apart from the competition</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="benefit-card card" ng-repeat="benefit in vm.benefits" scroll-animate
+                    scroll-delay="{{$index * 100}}">
+                    <h3>{{benefit.title}}</h3>
+                    <p class="color-gray">{{benefit.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Overview Section -->
+    <section class="process-section section"
+        style="background-color: var(--color-primary); color: var(--color-secondary);">
+        <div class="container">
+            <div class="section-header text-center mb-2xl" scroll-animate>
+                <h2 style="color: var(--color-secondary);">Our Process</h2>
+                <p style="color: var(--color-accent);">From concept to launch, we guide you every step of the way</p>
+            </div>
+
+            <div class="process-grid grid grid-4">
+                <div class="process-step" ng-repeat="step in vm.process" scroll-animate scroll-delay="{{$index * 100}}">
+                    <div class="step-number"
+                        style="font-size: 3rem; font-weight: 700; color: var(--color-accent); margin-bottom: var(--spacing-md);">
+                        {{step.step}}</div>
+                    <h4 style="color: var(--color-secondary);">{{step.title}}</h4>
+                    <p style="color: var(--color-accent);">{{step.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section">
+        <div class="container text-center">
+            <div scroll-animate>
+                <h2 class="mb-md">Ready to Start Your Project?</h2>
+                <p class="color-gray mb-xl" style="font-size: var(--font-size-lg);">Let's create something amazing
+                    together</p>
+                <a href="#!/contact" class="btn btn-large">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<style>
+    /* Home Page Specific Styles */
+    .hero {
+        padding-top: var(--spacing-4xl);
+        padding-bottom: var(--spacing-4xl);
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin-bottom: var(--spacing-3xl);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-5xl);
+        line-height: 1.1;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+        color: var(--color-gray-dark);
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: var(--spacing-md);
+        flex-wrap: wrap;
+    }
+
+    /* 3D Device Mockup */
+    .device-3d {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .device-mockup {
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-gray-dark) 100%);
+        padding: var(--spacing-2xl);
+        border: 2px solid var(--color-accent);
+        position: relative;
+        transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+        transition: transform 0.6s ease;
+    }
+
+    .device-mockup:hover {
+        transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    }
+
+    .device-screen {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        background-color: var(--color-secondary);
+        border: 2px solid var(--color-primary);
+    }
+
+    .benefit-card {
+        text-align: center;
+        padding: var(--spacing-xl);
+    }
+
+    .benefit-card h3 {
+        margin-bottom: var(--spacing-md);
+        font-size: var(--font-size-xl);
+    }
+
+    .process-step {
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: var(--font-size-3xl);
+        }
+
+        .hero-subtitle {
+            font-size: var(--font-size-base);
+        }
+
+        .hero-cta {
+            flex-direction: column;
+        }
+
+        .hero-cta .btn {
+            width: 100%;
+        }
+    }
+</style>

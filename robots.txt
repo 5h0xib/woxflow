@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://woxflow.in/sitemap.xml
