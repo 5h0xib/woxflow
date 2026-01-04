@@ -25,57 +25,72 @@
                     <form name="contactForm" ng-submit="vm.submitForm(contactForm.$valid)" novalidate>
 
                         <!-- Name Field -->
-                        <div class="form-group">
-                            <label for="name" class="form-label">Your Name *</label>
-                            <input type="text" id="name" name="name" class="form-input" ng-model="vm.formData.name"
-                                required placeholder="John Doe"
-                                ng-class="{'error-border': contactForm.name.$invalid && (contactForm.name.$touched || vm.submitted)}" />
-                            <div ng-show="contactForm.name.$invalid && (contactForm.name.$touched || vm.submitted)"
-                                class="form-error">
-                                <span ng-show="contactForm.name.$error.required">Name is required</span>
+                        <div class="brutalist-input-component" ng-class="{'has-value': vm.formData.name.length > 0}">
+                            <div class="brutalist-container"
+                                ng-class="{'valid': contactForm.name.$valid && vm.formData.name.length > 0}">
+                                <div class="brutalist-input-wrapper">
+                                    <label class="brutalist-label">YOUR NAME</label>
+                                    <input type="text" name="name" class="brutalist-field" ng-model="vm.formData.name"
+                                        required placeholder="John Doe">
+                                </div>
+                                <div class="brutalist-icon-container">
+                                    <div class="brutalist-icon">
+                                        <i class="fas fa-check" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Email Field -->
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-input" ng-model="vm.formData.email"
-                                required placeholder="john@example.com"
-                                ng-class="{'error-border': contactForm.email.$invalid && (contactForm.email.$touched || vm.submitted)}" />
-                            <div ng-show="contactForm.email.$invalid && (contactForm.email.$touched || vm.submitted)"
-                                class="form-error">
-                                <span ng-show="contactForm.email.$error.required">Email is required</span>
-                                <span
-                                    ng-show="contactForm.email.$error.email && !contactForm.email.$error.required">Please
-                                    enter a valid email</span>
+                        <div class="brutalist-input-component" ng-class="{'has-value': vm.formData.email.length > 0}">
+                            <div class="brutalist-container"
+                                ng-class="{'valid': contactForm.email.$valid && vm.formData.email.length > 0}">
+                                <div class="brutalist-input-wrapper">
+                                    <label class="brutalist-label">ENTER EMAIL</label>
+                                    <input type="email" name="email" class="brutalist-field"
+                                        ng-model="vm.formData.email" required placeholder="john@example.com">
+                                </div>
+                                <div class="brutalist-icon-container">
+                                    <div class="brutalist-icon">
+                                        <i class="fas fa-check" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Phone Number Field -->
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number (IN)*</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" ng-model="vm.formData.phone"
-                                required maxlength="10" pattern="[0-9]{10}" placeholder="9876543210"
-                                ng-change="vm.formatPhoneNumber()"
-                                ng-class="{'error-border': contactForm.phone.$invalid && (contactForm.phone.$touched || vm.submitted)}" />
-                            <div ng-show="contactForm.phone.$invalid && (contactForm.phone.$touched || vm.submitted)"
-                                class="form-error">
-                                <span ng-show="contactForm.phone.$error.required">Phone number is required</span>
-                                <span
-                                    ng-show="contactForm.phone.$error.pattern && !contactForm.phone.$error.required">Please
-                                    enter a valid 10-digit phone number</span>
+                        <!-- Phone Field -->
+                        <div class="brutalist-input-component" ng-class="{'has-value': vm.formData.phone.length > 0}">
+                            <div class="brutalist-container"
+                                ng-class="{'valid': contactForm.phone.$valid && vm.formData.phone.length > 0}">
+                                <div class="brutalist-input-wrapper">
+                                    <label class="brutalist-label">PHONE NUMBER (IN)</label>
+                                    <input type="tel" name="phone" class="brutalist-field" ng-model="vm.formData.phone"
+                                        required maxlength="10" pattern="[0-9]{10}" placeholder="9876543210"
+                                        ng-change="vm.formatPhoneNumber()">
+                                </div>
+                                <div class="brutalist-icon-container">
+                                    <div class="brutalist-icon">
+                                        <i class="fas fa-check" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Message Field -->
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message *</label>
-                            <textarea id="message" name="message" class="form-textarea" ng-model="vm.formData.message"
-                                required placeholder="Tell us about your project..." rows="5"
-                                ng-class="{'error-border': contactForm.message.$invalid && (contactForm.message.$touched || vm.submitted)}"></textarea>
-                            <div ng-show="contactForm.message.$invalid && (contactForm.message.$touched || vm.submitted)"
-                                class="form-error">
-                                <span ng-show="contactForm.message.$error.required">Message is required</span>
+                        <!-- Message Field (Textarea) -->
+                        <div class="brutalist-input-component" ng-class="{'has-value': vm.formData.message.length > 0}">
+                            <div class="brutalist-container"
+                                ng-class="{'valid': contactForm.message.$valid && vm.formData.message.length > 0}">
+                                <div class="brutalist-input-wrapper">
+                                    <label class="brutalist-label">MESSAGE</label>
+                                    <textarea name="message" class="brutalist-field" ng-model="vm.formData.message"
+                                        required placeholder="Tell us about your project..." rows="5"
+                                        style="min-height: 150px; resize: vertical;"></textarea>
+                                </div>
+                                <div class="brutalist-icon-container">
+                                    <div class="brutalist-icon">
+                                        <i class="fas fa-check" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
