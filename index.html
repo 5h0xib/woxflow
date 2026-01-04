@@ -92,6 +92,15 @@
 
 <body>
 
+    <!-- Preloader -->
+    <div class="stack-loader-container" id="preloader">
+        <div class="stack">
+            <div class="stack__card"></div>
+            <div class="stack__card"></div>
+            <div class="stack__card"></div>
+        </div>
+    </div>
+
     <!-- Scroll Progress Bar -->
     <div class="progress-bar-container">
         <div class="progress-bar"></div>
@@ -226,6 +235,19 @@
 
     <!-- Navigation Toggle Script -->
     <script>
+        // Preloader Logic
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 500);
+                }, 1000); // Optional small delay to ensure smooth transition
+            }
+        });
+
         // Mobile navigation toggle
         document.addEventListener('DOMContentLoaded', function () {
             const navToggle = document.getElementById('navToggle');
