@@ -20,7 +20,7 @@
     <meta property="og:title" content="Woxflow - Building Websites That Flow">
     <meta property="og:description"
         content="Woxflow is a modern web development agency in Pune specializing in UI/UX design, e-commerce, and custom web solutions.">
-    <meta property="og:image" content="https://woxflow.in/assets/woxflow-bg.jpg">
+    <meta property="og:image" content="https://woxflow.in/assets/images/woxflow-bg.jpg">
     <meta property="og:site_name" content="Woxflow">
 
     <!-- Twitter -->
@@ -29,7 +29,7 @@
     <meta property="twitter:title" content="Woxflow - Building Websites That Flow">
     <meta property="twitter:description"
         content="Woxflow is a modern web development agency in Pune specializing in UI/UX design, e-commerce, and custom web solutions.">
-    <meta property="twitter:image" content="https://woxflow.in/assets/woxflow-bg.jpg">
+    <meta property="twitter:image" content="https://woxflow.in/assets/images/woxflow-bg.jpg">
 
     <link rel="icon" href="./assets/images/Wlogo.png">
     <link rel="apple-touch-icon" href="./assets/images/Wlogo.png">
@@ -98,7 +98,7 @@
             <nav class="nav">
                 <a href="#!/" class="logo">
                     <span class="logo-img">
-                        <img src="./assets/images/WoxflowLogoBlack.png" alt="Woxflow">
+                        <img src="./assets/images/WoxflowLogoBlack.png" alt="Woxflow" id="headerLogo">
                     </span>
                 </a>
 
@@ -116,6 +116,10 @@
                     <li><a href="#!/services" class="nav-link">Services</a></li>
                     <li><a href="#!/portfolio" class="nav-link">Portfolio</a></li>
                     <li><a href="#!/contact" class="nav-link">Contact</a></li>
+                    <li class="nav-toggle-box">
+                        <input type="checkbox" id="toggle">
+                        <label for="toggle" class="toggle-label"></label>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -129,7 +133,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="footer-logo"><img src="./assets/images/woxflowLogo.png" alt="footer-logo" height="50px">
+                    <h3 class="footer-logo"><img src="./assets/images/woxflowLogo.png" alt="footer-logo" height="50px"
+                            id="footerLogo">
                     </h3>
                     <p class="footer-text">Building Websites That Flow</p>
                 </div>
@@ -195,6 +200,9 @@
     <!-- Directives -->
     <script src="directives/scrollAnimate.js"></script>
 
+    <!-- Theme Toggle Script -->
+    <script src="assets/js/theme.js"></script>
+
     <!-- Navigation Toggle Script -->
     <script>
         // Mobile navigation toggle
@@ -224,6 +232,17 @@
                     navMenu.classList.remove('active');
                     navToggle.classList.remove('active');
                 });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const isClickInsideMenu = navMenu.contains(event.target);
+                const isClickOnToggle = navToggle.contains(event.target);
+
+                if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
             });
         });
     </script>

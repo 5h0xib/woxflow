@@ -211,8 +211,7 @@
                 hcaptchaResponse = hcaptcha.getResponse(vm.hcaptchaWidgetId);
             }
 
-            //var encodedKey = 'NjZiMDU4ZDYtMmEyNy00MWRiLWJkMzMtYzJlMTJhZWU2NGRj';
-            var encodedKey = 'ZGQ5NWIzZDYtZDJmNi00Zjc0LTliYTQtM2RkMzZhOWI1ZDcx';
+            var encodedKey = 'NjZiMDU4ZDYtMmEyNy00MWRiLWJkMzMtYzJlMTJhZWU2NGRj';
             var accessKey = atob(encodedKey);
 
             // Prepare form data object for Web3Forms
@@ -325,5 +324,4 @@
             vm.resetForm();
         };
     }
-
 })();
