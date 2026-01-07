@@ -74,6 +74,37 @@
                 description: 'Responsive designs that work on any device'
             }
         ];
+
+        // Client Testimonials
+        vm.testimonials = [
+            {
+                name: 'Sarah Mitchell',
+                role: 'CEO, TechFlow',
+                quote: 'Woxflow transformed our online presence. Their minimalist approach and attention to detail gave us exactly the premium look we needed.'
+            },
+            {
+                name: 'James Reynolds',
+                role: 'Founder, Creative Pulse',
+                quote: 'The team understood our vision perfectly. The development process was smooth, and the end result exceeded our expectations.'
+            },
+            {
+                name: 'Elena Rodriguez',
+                role: 'Marketing Director, Skyline',
+                quote: 'Our conversion rates have increased by 40% since launching the new site. The user experience is flawless on every device.'
+            }
+        ];
+
+        // Testimonial Scroll Logic
+        vm.scrollTestimonials = function (direction) {
+            var container = document.querySelector('.testimonial-slider');
+            if (container) {
+                var scrollAmount = container.clientWidth;
+                container.scrollBy({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        };
     }
 
 })();

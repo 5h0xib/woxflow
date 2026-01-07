@@ -129,7 +129,8 @@
 
                     <div class="contact-info-section mb-xl">
                         <h4 class="mb-md">Address</h4>
-                        <p class="color-gray">{{vm.contactInfo.address}}</p>
+                        <p class="color-gray"><b>Pune: </b>{{vm.contactInfo.address}}</p>
+                        <!-- <p class="color-gray"><b>Dubai: </b>{{vm.contactInfo.addressDubai}}</p> -->
                     </div>
 
                     <div class="contact-info-section mb-xl">
@@ -147,7 +148,7 @@
 
                     <div class="contact-info-section">
                         <h4 class="mb-md">Follow Us</h4>
-                        <div class="social-links">
+                        <div style="display: flex; gap: 10px; align-items: center; margin: 6px;">
                             <a class="contact-social-links" style="color: var(--color-primary);"
                                 href="{{vm.contactInfo.social.facebook}}" target="_blank" rel="noopener noreferrer"
                                 aria-label="Facebook">

@@ -26,8 +26,9 @@
         // Initialize contact information
         vm.contactInfo = {
             address: 'Office 16, Second Floor Navrang Plaza Tingre Nagar, Airport Rd, near Sawant Petrol Pump, Vishrantwadi, Pune, Maharashtra 411015',
+            addressDubai: 'Internet city Dubai -- -- ',
             email: 'contact@woxflow.in',
-            phones: ['+91 92843 89021', '+91 87660 99144'],
+            phones: ['+971 56 164 8987', '+91 92843 89021', '+91 87660 99144'],
             social: {
                 facebook: 'https://www.facebook.com/profile.php?id=61561313854576',
                 instagram: 'https://www.instagram.com/woxflow/',
