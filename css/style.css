@@ -18,6 +18,8 @@
     --color-shadow-lite: rgba(0, 0, 0, 0.05);
     --color-shadow-medium: rgba(0, 0, 0, 0.08);
     --color-shadow-dark: rgba(0, 0, 0, 0.12);
+    --background-card: #00000060;
+    --shadow-opposite: rgba(0, 0, 0, 0.274);
 
     /* Typography */
     --font-heading: 'Poppins', 'Montserrat', sans-serif;
@@ -89,6 +91,8 @@
     --color-shadow-lite: rgba(255, 255, 255, 0.05);
     --color-shadow-medium: rgba(255, 255, 255, 0.08);
     --color-shadow-dark: rgba(255, 255, 255, 0.12);
+    --background-card: #ffffff60;
+    --shadow-opposite: rgba(255, 255, 255, 0.171);
 
 }
 
@@ -748,7 +752,7 @@ a:hover {
     bottom: 0;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.534);
+    background-color: var(--background-card);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -766,6 +770,7 @@ a:hover {
     font-size: var(--font-size-xl);
     font-weight: 600;
     text-align: center;
+
 }
 
 /* ============================================
