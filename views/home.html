@@ -15,12 +15,80 @@
                 </div>
             </div>
 
-            <!-- 3D Device Animation -->
-            <div class="device-3d" scroll-animate scroll-delay="200">
-                <div class="device-3d-inner">
-                    <div class="device-mockup">
-                        <div class="device-screen"></div>
-                    </div>
+            <!-- Floating Icons Animation -->
+            <div class="floating-icons-container" scroll-animate scroll-delay="200">
+                <!-- Track 1: Left to Right, Normal Speed -->
+                <div class="floating-icons-track track-1">
+                    <!-- Set 1 -->
+                    <i class="fas fa-code floating-icon"></i>
+                    <i class="fas fa-laptop-code floating-icon"></i>
+                    <i class="fas fa-terminal floating-icon"></i>
+                    <i class="fas fa-database floating-icon"></i>
+                    <i class="fab fa-html5 floating-icon"></i>
+                    <i class="fab fa-css3-alt floating-icon"></i>
+                    <i class="fab fa-js floating-icon"></i>
+                    <i class="fab fa-react floating-icon"></i>
+                    <i class="fab fa-node floating-icon"></i>
+                    <i class="fab fa-git-alt floating-icon"></i>
+                    <!-- Set 2 -->
+                    <i class="fas fa-code floating-icon"></i>
+                    <i class="fas fa-laptop-code floating-icon"></i>
+                    <i class="fas fa-terminal floating-icon"></i>
+                    <i class="fas fa-database floating-icon"></i>
+                    <i class="fab fa-html5 floating-icon"></i>
+                    <i class="fab fa-css3-alt floating-icon"></i>
+                    <i class="fab fa-js floating-icon"></i>
+                    <i class="fab fa-react floating-icon"></i>
+                    <i class="fab fa-node floating-icon"></i>
+                    <i class="fab fa-git-alt floating-icon"></i>
+                </div>
+
+                <!-- Track 2: Right to Left, Faster -->
+                <div class="floating-icons-track track-2">
+                    <!-- Set 1 -->
+                    <i class="fab fa-python floating-icon"></i>
+                    <i class="fab fa-java floating-icon"></i>
+                    <i class="fab fa-docker floating-icon"></i>
+                    <i class="fab fa-aws floating-icon"></i>
+                    <i class="fas fa-server floating-icon"></i>
+                    <i class="fab fa-angular floating-icon"></i>
+                    <i class="fab fa-sass floating-icon"></i>
+                    <i class="fab fa-less floating-icon"></i>
+                    <i class="fab fa-npm floating-icon"></i>
+                    <!-- Set 2 -->
+                    <i class="fab fa-python floating-icon"></i>
+                    <i class="fab fa-java floating-icon"></i>
+                    <i class="fab fa-docker floating-icon"></i>
+                    <i class="fab fa-aws floating-icon"></i>
+                    <i class="fas fa-server floating-icon"></i>
+                    <i class="fab fa-angular floating-icon"></i>
+                    <i class="fab fa-sass floating-icon"></i>
+                    <i class="fab fa-less floating-icon"></i>
+                    <i class="fab fa-npm floating-icon"></i>
+                </div>
+
+                <!-- Track 3: Left to Right, Slower -->
+                <div class="floating-icons-track track-3">
+                    <!-- Set 1 -->
+                    <i class="fab fa-linux floating-icon"></i>
+                    <i class="fab fa-android floating-icon"></i>
+                    <i class="fab fa-windows floating-icon"></i>
+                    <i class="fas fa-bug floating-icon"></i>
+                    <i class="fas fa-code-branch floating-icon"></i>
+                    <i class="fas fa-cloud floating-icon"></i>
+                    <i class="fas fa-mobile-alt floating-icon"></i>
+                    <i class="fas fa-keyboard floating-icon"></i>
+                    <i class="fas fa-mouse floating-icon"></i>
+                    <!-- Set 2 -->
+                    <i class="fab fa-linux floating-icon"></i>
+                    <i class="fab fa-android floating-icon"></i>
+                    <i class="fab fa-windows floating-icon"></i>
+                    <i class="fas fa-bug floating-icon"></i>
+                    <i class="fas fa-code-branch floating-icon"></i>
+                    <i class="fas fa-cloud floating-icon"></i>
+                    <i class="fas fa-mobile-alt floating-icon"></i>
+                    <i class="fas fa-keyboard floating-icon"></i>
+                    <i class="fas fa-mouse floating-icon"></i>
                 </div>
             </div>
         </div>
@@ -174,31 +242,7 @@
         flex-wrap: wrap;
     }
 
-    /* 3D Device Mockup */
-    .device-3d {
-        max-width: 600px;
-        margin: 0 auto;
-    }
 
-    .device-mockup {
-        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-gray-dark) 100%);
-        padding: var(--spacing-2xl);
-        border: 2px solid var(--color-accent);
-        position: relative;
-        transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
-        transition: transform 0.6s ease;
-    }
-
-    .device-mockup:hover {
-        transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-    }
-
-    .device-screen {
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        background-color: var(--color-secondary);
-        border: 2px solid var(--color-primary);
-    }
 
     .benefit-card {
         text-align: center;

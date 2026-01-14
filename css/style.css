@@ -723,19 +723,65 @@ a:hover {
     transform: translateY(0);
 }
 
-/* 3D Device Animation */
-.device-3d {
-    perspective: 1000px;
+/* Floating Icons Animation */
+.floating-icons-container {
+    width: 100%;
+    overflow: hidden;
+    padding: var(--spacing-2xl) 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.device-3d-inner {
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease;
+.floating-icons-track {
+    display: flex;
+    gap: var(--spacing-3xl);
+    width: max-content;
+    /* Base animation, overridden by track specific classes */
+    animation: floatRight 30s linear infinite;
 }
 
-.device-3d:hover .device-3d-inner {
-    transform: rotateY(10deg) rotateX(5deg);
+.track-1 {
+    animation-duration: 30s;
+}
+
+.track-2 {
+    animation-duration: 25s;
+    animation-direction: reverse;
+    opacity: 0.8;
+}
+
+.track-3 {
+    animation-duration: 60s;
+    opacity: 0.6;
+}
+
+.floating-icon {
+    font-size: 3rem;
+    /* Slightly smaller to fit 3 rows */
+    color: var(--color-gray-dark);
+    opacity: 0.3;
+    transition: all var(--transition-base);
+}
+
+.floating-icon:hover {
+    color: var(--color-accent-blue);
+    opacity: 1;
+    transform: translateY(-5px) scale(1.2);
+    cursor: pointer;
+}
+
+@keyframes floatRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 /* Hover Overlay Effect */
