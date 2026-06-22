@@ -11,7 +11,7 @@
                 // Add scroll-animate class
                 element.addClass('scroll-animate');
 
-                // Intersection Observer for performance
+                // Intersection Observe for performance
                 var observer = new IntersectionObserver(function (entries) {
                     entries.forEach(function (entry) {
                         if (entry.isIntersecting) {
