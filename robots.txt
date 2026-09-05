@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /#!/success
+Disallow: /#!/404
 
 Sitemap: https://woxflow.in/sitemap.xml

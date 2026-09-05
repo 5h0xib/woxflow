@@ -13,6 +13,13 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="https://woxflow.in/">
     <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Pune, Maharashtra, India">
+    <meta name="geo.position" content="18.5204;73.8567">
+    <meta name="ICBM" content="18.5204, 73.8567">
+    <meta property="og:locale" content="en_IN">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -35,13 +42,37 @@
     <link rel="apple-touch-icon" href="./assets/images/Wlogo.png">
 
     <!-- Structured Data (JSON-LD) -->
+
+    <!-- Schema 1: LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "name": "Woxflow",
       "url": "https://woxflow.in",
       "logo": "https://woxflow.in/assets/images/WoxflowLogoBlack.png",
+      "image": "https://woxflow.in/assets/images/woxflow-bg.jpg",
+      "description": "Woxflow is a digital solutions agency in Pune offering web development, UI/UX design, e-commerce development, and AI business automation services.",
+      "email": "contact@woxflow.in",
+      "telephone": "+917757060229",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5204",
+        "longitude": "73.8567"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Pune" },
+        { "@type": "Country", "name": "India" }
+      ],
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 09:00-18:00",
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61561313854576",
         "https://www.instagram.com/woxflow/"
@@ -49,23 +80,105 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "contact@woxflow.in",
-        "contactType": "customer service"
+        "telephone": "+917757060229",
+        "contactType": "customer service",
+        "availableLanguage": "English"
       }
     }
     </script>
+
+    <!-- Schema 2: WebSite -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Woxflow",
-        "url": "https://woxflow.in",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://woxflow.in/#!/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Woxflow",
+      "url": "https://woxflow.in",
+      "description": "Web development and AI automation agency in Pune. We build modern websites and intelligent business workflows.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://woxflow.in/#!/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
+
+    <!-- Schema 3: Services (ItemList) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Woxflow Services",
+      "url": "https://woxflow.in/#!/services",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Web Development",
+            "description": "Custom websites and web applications built for performance, scalability, and business growth.",
+            "provider": { "@type": "LocalBusiness", "name": "Woxflow", "url": "https://woxflow.in" },
+            "areaServed": "Pune, India",
+            "url": "https://woxflow.in/#!/services"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "UI/UX Design",
+            "description": "Clean, intuitive digital experiences designed to improve usability, engagement, and conversions.",
+            "provider": { "@type": "LocalBusiness", "name": "Woxflow", "url": "https://woxflow.in" },
+            "areaServed": "Pune, India",
+            "url": "https://woxflow.in/#!/services"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "E-Commerce Development",
+            "description": "Conversion-focused online stores with payments, product management, integrations, and scalable architecture.",
+            "provider": { "@type": "LocalBusiness", "name": "Woxflow", "url": "https://woxflow.in" },
+            "areaServed": "Pune, India",
+            "url": "https://woxflow.in/#!/services"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "AI Automation",
+            "description": "Intelligent workflows that automate repetitive business processes, connect your tools, and reduce manual work.",
+            "provider": { "@type": "LocalBusiness", "name": "Woxflow", "url": "https://woxflow.in" },
+            "areaServed": "Pune, India",
+            "url": "https://woxflow.in/#!/services"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema 4: BreadcrumbList (Homepage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://woxflow.in/"
+        }
+      ]
+    }
+    </script>
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
