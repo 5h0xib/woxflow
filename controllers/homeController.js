@@ -15,23 +15,23 @@
         vm.services = [
             {
                 title: 'Web Development',
-                description: 'Custom websites built with modern technologies, optimized for performance and scalability.',
+                description: 'Custom websites and web applications built for performance, scalability, and business growth.',
                 icon: 'code'
             },
             {
                 title: 'UI/UX Design',
-                description: 'Beautiful, intuitive interfaces designed to engage users and drive conversions.',
+                description: 'Clean, intuitive digital experiences designed to improve usability, engagement, and conversions.',
                 icon: 'palette'
             },
             {
                 title: 'E-Commerce',
-                description: 'Complete online stores with secure payments and seamless shopping experiences.',
+                description: 'Conversion-focused online stores with payments, product management, integrations, and scalable architecture.',
                 icon: 'shopping'
             },
             {
-                title: 'Maintenance',
-                description: 'Ongoing support and updates to keep your website running smoothly and securely.',
-                icon: 'support'
+                title: 'AI Automation',
+                description: 'AI-powered workflows that automate repetitive business tasks, connect your tools, and reduce manual work.',
+                icon: 'automation'
             }
         ];
 
@@ -39,39 +39,39 @@
         vm.process = [
             {
                 step: '01',
-                title: 'Discovery',
-                description: 'We learn about your business, goals, and target audience.'
+                title: 'Discover',
+                description: 'Understand the business, current tools, problems, and goals.'
             },
             {
                 step: '02',
-                title: 'Design',
-                description: 'We create wireframes and design mockups for your approval.'
+                title: 'Plan',
+                description: 'Identify the right website, automation, integrations, and technology.'
             },
             {
                 step: '03',
-                title: 'Development',
-                description: 'We build your website using modern technologies and best practices.'
+                title: 'Build',
+                description: 'Develop the website or automation workflow and connect the required systems.'
             },
             {
                 step: '04',
-                title: 'Launch',
-                description: 'We deploy your website and provide training and ongoing support.'
+                title: 'Launch & Optimize',
+                description: 'Deploy the solution, test it, monitor it, and improve it over time.'
             }
         ];
 
         // Why Woxflow benefits
         vm.benefits = [
             {
-                title: 'Modern Design',
-                description: 'Clean, minimal interfaces that make an impact'
+                title: 'Business-Focused Solutions',
+                description: 'We build technology around your actual business goals, not just technical requirements.'
             },
             {
-                title: 'Fast Performance',
-                description: 'Optimized code for lightning-fast load times'
+                title: 'Automation That Saves Time',
+                description: 'We identify repetitive processes and turn them into reliable automated workflows.'
             },
             {
-                title: 'Mobile First',
-                description: 'Responsive designs that work on any device'
+                title: 'Built to Scale',
+                description: 'Solutions are designed so your website and workflows can grow with your business.'
             }
         ];
 

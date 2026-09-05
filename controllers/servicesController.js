@@ -15,46 +15,64 @@
         vm.services = [
             {
                 title: 'Web Development',
-                description: 'We build custom websites tailored to your business needs. From simple landing pages to complex web applications, our development team uses modern frameworks and best practices to deliver fast, secure, and scalable solutions.',
+                description: 'We build custom websites and web applications tailored to your business. From business websites and landing pages to complex web applications and APIs, our team uses modern technologies and best practices to deliver fast, secure, and scalable solutions.',
                 features: [
-                    'Responsive design',
-                    'Custom functionality',
+                    'Business websites & landing pages',
+                    'Web applications & portals',
+                    'API development & integration',
                     'CMS integration',
-                    'API development',
-                    'Performance optimization'
+                    'Performance optimization',
+                    'Responsive design'
                 ]
             },
             {
                 title: 'UI/UX Design',
-                description: 'Our design team creates beautiful, intuitive interfaces that engage users and drive conversions. We focus on user research, wireframing, prototyping, and visual design to craft exceptional digital experiences.',
+                description: 'Our design team creates clean, intuitive interfaces that engage users and improve conversions. We focus on user research, wireframing, prototyping, and visual design to craft digital experiences that are easy to use and built around your audience.',
                 features: [
                     'User research',
                     'Wireframing & prototyping',
                     'Visual design',
-                    'Interaction design',
-                    'Usability testing'
+                    'Responsive design',
+                    'Usability optimization',
+                    'Interaction design'
                 ]
             },
             {
                 title: 'E-Commerce Solutions',
-                description: 'Launch your online store with confidence. We develop complete e-commerce platforms with secure payment processing, inventory management, and seamless checkout experiences that convert browsers into buyers.',
+                description: 'Launch your online store with confidence. We develop complete e-commerce platforms with secure payment processing, product management, and seamless checkout experiences designed to convert browsers into buyers and scale with your business.',
                 features: [
-                    'Shopping cart systems',
+                    'Online store development',
                     'Payment gateway integration',
-                    'Product management',
-                    'Order tracking',
+                    'Product & inventory management',
+                    'Order management',
+                    'Third-party integrations',
                     'Analytics & reporting'
                 ]
             },
             {
                 title: 'Maintenance & Support',
-                description: 'Keep your website running smoothly with our ongoing maintenance and support services. We provide regular updates, security patches, performance monitoring, and technical support to ensure your site stays secure and up-to-date.',
+                description: 'Keep your website running smoothly with our ongoing maintenance and support services. We provide regular updates, security monitoring, performance checks, and technical support so your site stays secure, fast, and up to date.',
                 features: [
-                    'Regular updates',
+                    'Regular updates & patches',
                     'Security monitoring',
                     'Performance optimization',
                     'Technical support',
                     'Backup & recovery'
+                ]
+            },
+            {
+                title: 'AI Automation',
+                description: 'We design intelligent workflows that automate repetitive business processes, connect the tools your team already uses, and apply AI where it can provide real value. The result is less manual work, fewer errors, and more time for your team to focus on what matters.',
+                features: [
+                    'Lead capture & qualification',
+                    'Automated email workflows',
+                    'CRM automation',
+                    'Customer support automation',
+                    'Document & data processing',
+                    'Notifications & approval workflows',
+                    'Social media & marketing workflows',
+                    'Business reporting automation',
+                    'API & application integrations'
                 ]
             }
         ];

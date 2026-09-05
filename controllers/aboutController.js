@@ -12,11 +12,11 @@
         var vm = this;
 
         // Agency information
-        vm.story = 'Founded with a vision to create websites that flow seamlessly, Woxflow is a modern web development agency based in Pune and part Dubai. We specialize in crafting minimal, elegant digital experiences that help businesses thrive online.';
+        vm.story = 'Founded with a vision to build technology that genuinely helps businesses grow, Woxflow is a digital solutions agency based in Pune and part Dubai. We combine modern web development with intelligent business automation — building high-performance websites and designing workflows that reduce repetitive work, connect business tools, and help teams operate more efficiently.';
 
-        vm.mission = 'To empower businesses with elegant, high-performing websites that drive growth and create lasting impressions.';
+        vm.mission = 'To help businesses grow by building modern websites and automating the processes that slow them down — delivering practical, well-crafted solutions that save time and create real results.';
 
-        vm.vision = 'To be the leading web development agency known for innovative design, exceptional quality, and client-focused solutions.';
+        vm.vision = 'To be a trusted digital partner for businesses that want both a strong online presence and the operational efficiency that smart automation provides.';
 
         // Core values
         vm.values = [
